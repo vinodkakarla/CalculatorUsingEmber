@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Simple Calculator</title>
+	<link rel="stylesheet" href="WebContent/stylesheets/style.css">
+	<script src="http://emberjs.com.s3.amazonaws.com/getting-started/jquery.min.js"></script>
+	<script src="http://emberjs.com.s3.amazonaws.com/getting-started/handlebars.js"></script>
+	<script src="http://emberjs.com.s3.amazonaws.com/getting-started/ember.js"></script>
+	<script src="http://emberjs.com.s3.amazonaws.com/getting-started/ember-data.js"></script>
+	<script type="text/javascript" src="WebContent/javascripts/app.js"></script>
+	<script type="text/javascript"></script>
+</head>
+<body>
+
+<script type="text/x-handlebars" data-template-name="calculator">
+	<div style="width:864px;text-align: center;">
+		{{input type="text" id="new-todo" placeholder="Use the buttons below.." 
+			value=infixNotation}}
+	</div>
+	<div style="width:864px;text-align: center;">
+		<ul class="block-grid four-up">
+			{{#each itemController="buttons"}}
+					<li><div {{action "buttonEvent"}}>{{button}}</div></li>
+			{{/each}}
+		</ul>
+	</div>
+</script>
+
+</body>
+</html>
